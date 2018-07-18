@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy toDir="C:\Sangeeta\apigee\Hello_Wold_Demo\Hello_Wold_Demo\edge/target/classes">
+    <fileset dir="C:\Sangeeta\apigee\Hello_Wold_Demo\Hello_Wold_Demo\edge/target">
+      <include name="apiproxy/**"/>
+    </fileset>
+  </copy>
+</target>
+</project>

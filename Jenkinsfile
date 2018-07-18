@@ -10,7 +10,7 @@ pipeline {
             stage('Clean') {
                 steps {
                 dir('edge') {
-                    bash "mvn clean"
+                    bat "mvn clean"
                 }
             }
         }

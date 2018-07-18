@@ -78,7 +78,7 @@ pipeline {
                 }
             }
         }
-            /*stage('Post-Deployment Configurations for API ') {
+            stage('Post-Deployment Configurations for API ') {
                 steps {
                     dir('edge') {
                     println "Post-Deployment Configurations for API Products Configurations, App Developer and App Configuration "
@@ -89,17 +89,17 @@ pipeline {
                             "    apigee-config:developers apigee-config:apps apigee-config:exportAppKeys"
                 }
             }
-        }*/
+        }
 
-           /* stage('Functional Test') {
+            stage('Functional Test') {
                 steps {
                     dir('edge') {
                     sh "node ./node_modules/cucumber/bin/cucumber-js target/test/integration/features --format json:target/reports.json"
                 }
             }
-        }*/
+        }
 
-            /*stage('Coverage Test Report') {
+            stage('Coverage Test Report') {
                 steps {
                     dir('edge') {
                     publishHTML(target: [
@@ -113,16 +113,16 @@ pipeline {
                     )
                 }
             }
-        }*/
+        }
 
-            /*stage('Functional Test Report') {
+            stage('Functional Test Report') {
                 steps {
                     dir('edge') {
                     step([
                             $class             : 'CucumberReportPublisher',
-                            fileExcludePattern : '', */
+                            fileExcludePattern : '',
                            // fileIncludePattern : "**/reports.json",
-                          /*  ignoreFailedTests  : false,
+                            ignoreFailedTests  : false,
                             jenkinsBasePath    : '',
                             jsonReportDirectory: "target",
                             missingFails       : false,
@@ -133,7 +133,7 @@ pipeline {
                     ])
                 }
             }
-        }*/
+        }
         
     }
 }

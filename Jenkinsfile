@@ -78,7 +78,7 @@ pipeline {
                 }
             }
         }
-            stage('Post-Deployment Configurations for API ') {
+            /*stage('Post-Deployment Configurations for API ') {
                 steps {
                     dir('edge') {
                     println "Post-Deployment Configurations for API Products Configurations, App Developer and App Configuration "
@@ -89,7 +89,7 @@ pipeline {
                             "    apigee-config:developers apigee-config:apps apigee-config:exportAppKeys"
                 }
             }
-        }
+        }*/
 
     }
 }

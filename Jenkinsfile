@@ -10,7 +10,7 @@ pipeline {
             stage('Clean') {
                 steps {
                 dir('edge') {
-                    sh "mvn clean"
+                    bat "mvn clean"
                 }
             }
         }
@@ -91,50 +91,6 @@ pipeline {
             }
         }
 
-//            stage('Functional Test') {
-//                steps {
-//                    dir('edge') {
-//                    sh "node ./node_modules/cucumber/bin/cucumber-js target/test/integration/features --format json:target/reports.json"
-//                }
-//            }
-//        }
-//
-//            stage('Coverage Test Report') {
-//                steps {
-//                    dir('edge') {
-//                    publishHTML(target: [
-//                            allowMissing         : false,
-//                            alwaysLinkToLastBuild: false,
-//                            keepAll              : false,
-//                            reportDir            : "target/coverage/lcov-report",
-//                            reportFiles          : 'index.html',
-//                            reportName           : 'HTML Report'
-//                    ]
-//                    )
-//                }
-//            }
-//        }
-//
-//            stage('Functional Test Report') {
-//                steps {
-//                    dir('edge') {
-//                    step([
-//                            $class             : 'CucumberReportPublisher',
-//                            fileExcludePattern : '',
-//                           // fileIncludePattern : "**/reports.json",
-//                            ignoreFailedTests  : false,
-//                            jenkinsBasePath    : '',
-//                            jsonReportDirectory: "target",
-//                            missingFails       : false,
-//                            parallelTesting    : false,
-//                            pendingFails       : false,
-//                            skippedFails       : false,
-//                            undefinedFails     : false
-//                    ])
-//                }
-//            }
-//        }
-        
     }
 }
 

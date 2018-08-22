@@ -128,66 +128,65 @@
                     </plugin>
 
 
-                    <!--<plugin>-->
-                        <!--<groupId>com.google.code.maven-replacer-plugin</groupId>-->
-                        <!--<artifactId>replacer</artifactId>-->
-                        <!--<version>1.5.2</version>-->
-                        <!--<executions>-->
-                            <!--<execution>-->
-                                <!--<phase>prepare-package</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>replace</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                        <!--</executions>-->
-                        <!--<configuration>-->
-                            <!--<basedir>${target.root.dir}</basedir>-->
-                            <!--<includes>-->
-                                <!--<include>apiproxy/proxies/default.xml</include>-->
-                                <!--<include>apiproxy/proxies/loggly.xml</include>-->
-                                <!--&lt;!&ndash;<include>apiproxy/**</include>&ndash;&gt;-->
-                                <!--<include>test/integration/test-config.json</include>-->
-                                <!--<include>test/integration/auth-server.json</include>-->
-                                <!--<include>apiproxy/${project.artifactId}-v1.xml</include>-->
-                                <!--<include>resources/edge/org/apiProducts.json</include>-->
-                                <!--<include>resources/edge/org/developerApps.json</include>-->
-                            <!--</includes>-->
-                            <!--<replacements>-->
-                                <!--<replacement>-->
-                                    <!--<token>/${project.artifactId}/v1</token>-->
-                                    <!--<value>/${project.artifactId}/v1</value>-->
-                                <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>demo-test.apigee.net</token>-->
-                                    <!--<value>${api.northbound.domain}</value>-->
-                                <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>sampleAPIProduct</token>-->
-                                    <!--<value>${project.artifactId}Product-${env}</value>-->
-                                <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>sampleAPIApp</token>-->
-                                    <!--<value>${project.artifactId}-${org}-${env}</value>-->
-                                <!--</replacement>-->
+                   <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <version>1.5.2</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <basedir>${target.root.dir}</basedir>
+                            <includes>
+                                <include>apiproxy/proxies/default.xml</include>
+                                <include>apiproxy/proxies/loggly.xml</include>
+                                <include>test/integration/test-config.json</include>
+                                <include>test/integration/auth-server.json</include>
+                                <include>apiproxy/${project.artifactId}-v1.xml</include>
+                                <include>resources/edge/org/apiProducts.json</include>
+                                <include>resources/edge/org/developerApps.json</include>
+                            </includes>
+                            <replacements>
+                                <replacement>
+                                    <token>/${project.artifactId}/v1</token>
+                                    <value>/${project.artifactId}/v1</value>
+                                </replacement>
+                                <replacement>
+                                    <token>demo-test.apigee.net</token>
+                                    <value>${api.northbound.domain}</value>
+                                </replacement>
+                                <replacement>
+                                    <token>sampleAPIProduct</token>
+                                    <value>${project.artifactId}Product-${env}</value>
+                                </replacement>
+                                <replacement>
+                                    <token>sampleAPIApp</token>
+                                    <value>${project.artifactId}-${org}-${env}</value>
+                                </replacement>
                                 <!--<replacement>-->
                                 <!--<token>${project.artifactId}</token>-->
                                 <!--<value>${project.artifactId}</value>-->
                                 <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>edge_env</token>-->
-                                    <!--<value>${env}</value>-->
-                                <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>edgeVhostName</token>-->
-                                    <!--<value>${vhostEdgeName}</value>-->
-                                <!--</replacement>-->
-                                <!--<replacement>-->
-                                    <!--<token>@description</token>-->
-                                    <!--<value>commit ${commit} from ${branch} branch by ${user.name}</value>-->
-                                <!--</replacement>-->
-                            <!--</replacements>-->
-                        <!--</configuration>-->
-                    <!--</plugin>-->
+                                <replacement>
+                                    <token>edge_env</token>
+                                    <value>${env}</value>
+                                </replacement>
+                                <replacement>
+                                    <token>edgeVhostName</token>
+                                    <value>${vhostEdgeName}</value>
+                                </replacement>
+                                <replacement>
+                                    <token>@description</token>
+                                    <value>commit ${commit} from ${branch} branch by ${user.name}</value>
+                                </replacement>
+                            </replacements>
+                        </configuration>
+                    </plugin>
 
                     <!--configure maven artifact-->
                     <plugin>
@@ -262,34 +261,34 @@
                                     <goal>targetservers</goal>
                                 </goals>
                             </execution>
-                            <!--<execution>-->
-                                <!--<id>create-config-apiproduct</id>-->
-                                <!--<phase>install</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>apiproducts</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                            <!--<execution>-->
-                                <!--<id>create-config-developer</id>-->
-                                <!--<phase>install</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>developers</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                            <!--<execution>-->
-                                <!--<id>create-config-app</id>-->
-                                <!--<phase>install</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>apps</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                            <!--<execution>-->
-                                <!--<id>export-config-app</id>-->
-                                <!--<phase>install</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>exportAppKeys</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
+                            <execution>
+                                <id>create-config-apiproduct</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>apiproducts</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>create-config-developer</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>developers</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>create-config-app</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>apps</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>export-config-app</id>
+                                <phase>install</phase>
+                                <goals>
+                                    <goal>exportAppKeys</goal>
+                                </goals>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>

@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }
-            /*stage('Static Code Analysis, Unit Test and Coverage') {
+            stage('Static Code Analysis, Unit Test and Coverage') {
             
                 steps {
                     dir('edge') {
@@ -60,7 +60,7 @@ pipeline {
 
                 }
             }
-        }*/
+        }
 
             stage('Build proxy bundle') {
                 steps {

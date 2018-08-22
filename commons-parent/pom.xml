@@ -168,10 +168,10 @@
                                     <token>sampleAPIApp</token>
                                     <value>${project.artifactId}-${org}-${env}</value>
                                 </replacement>
-                                <!--<replacement>-->
-                                <!--<token>${project.artifactId}</token>-->
-                                <!--<value>${project.artifactId}</value>-->
-                                <!--</replacement>-->
+                                <replacement>
+                                <token>${project.artifactId}</token>
+                                <value>${project.artifactId}</value>
+                                </replacement>
                                 <replacement>
                                     <token>edge_env</token>
                                     <value>${env}</value>

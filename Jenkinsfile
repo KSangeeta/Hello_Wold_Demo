@@ -18,7 +18,7 @@ pipeline {
             
                 steps {
                     dir('edge') {
-                    sh "mvn test -Pproxy-unit-test "
+                    bat "mvn test -Pproxy-unit-test "
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 steps {
                     dir('edge') {
                     println "Predeployment of Caches "
-                    sh "mvn apigee-config:caches " +
+                    bat "mvn apigee-config:caches " +
                             "    -Papigee -Denv=${params.apigee_env} -Dorg=${params.apigee_org} " +
                             "    -Dusername=${params.apigee_user} " +
                             "    -Dpassword=${params.apigee_pwd}"
@@ -40,7 +40,7 @@ pipeline {
                 steps {
                     dir('edge') {
                     println "Predeployment of targetservers "
-                    sh "mvn apigee-config:targetservers " +
+                    bat "mvn apigee-config:targetservers " +
                             "    -Papigee -Denv=${params.apigee_env} -Dorg=${params.apigee_org} " +
                             "    -Dusername=${params.apigee_user} " +
                             "    -Dpassword=${params.apigee_pwd}"
@@ -53,7 +53,7 @@ pipeline {
                 steps {
                     dir('edge') {
                     println "Predeployment of keyvaluemaps  "
-                    sh "mvn apigee-config:keyvaluemaps " +
+                    bat "mvn apigee-config:keyvaluemaps " +
                             "    -Papigee -Denv=${params.apigee_env} -Dorg=${params.apigee_org} " +
                             "    -Dusername=${params.apigee_user} " +
                             "    -Dpassword=${params.apigee_pwd}"
@@ -78,7 +78,7 @@ pipeline {
                 }
             }
         }
-            /*stage('Post-Deployment Configurations for API ') {
+            stage('Post-Deployment Configurations for API ') {
                 steps {
                     dir('edge') {
                     println "Post-Deployment Configurations for API Products Configurations, App Developer and App Configuration "
@@ -89,7 +89,7 @@ pipeline {
                             "    apigee-config:developers apigee-config:apps apigee-config:exportAppKeys"
                 }
             }
-        }*/
+        }
 
     }
 }

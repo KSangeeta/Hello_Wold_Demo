@@ -59,8 +59,8 @@ pipeline {
                             "    -Dpassword=${params.apigee_pwd}"                
                 }
             }
-            */
-        }
+            
+        }*/
 
             stage('Build proxy bundle') {
                 steps {

@@ -48,7 +48,7 @@ pipeline {
                 }
             }
         }
-
+            /*
             stage('Pre-Deployment Configuration - keyvaluemaps ') {
                 steps {
                     dir('edge') {
@@ -59,6 +59,7 @@ pipeline {
                             "    -Dpassword=${params.apigee_pwd}"                
                 }
             }
+            */
         }
 
             stage('Build proxy bundle') {

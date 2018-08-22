@@ -52,17 +52,11 @@ pipeline {
             stage('Pre-Deployment Configuration - keyvaluemaps ') {
                 steps {
                     dir('edge') {
-                    println "Predeployment of keyvaluemaps  "
-                        /*
+                    println "Predeployment of keyvaluemaps  "                      
                     bat "mvn apigee-config:keyvaluemaps " +
                             "    -Papigee -Denv=${params.apigee_env} -Dorg=${params.apigee_org} " +
                             "    -Dusername=${params.apigee_user} " +
-                            "    -Dpassword=${params.apigee_pwd}"
-                */
-                        bat "mvn apigee-config:keyvaluemaps " +
-                            "    -Papigee -Denv=${params.apigee_env} " +
-                            "    -Dusername=${params.apigee_user} " +
-                            "    -Dpassword=${params.apigee_pwd}"
+                            "    -Dpassword=${params.apigee_pwd}"                
                 }
             }
         }

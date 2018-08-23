@@ -47,8 +47,7 @@ pipeline {
 
                 }
             }
-        }
-            /*
+        }            
             stage('Pre-Deployment Configuration - keyvaluemaps ') {
                 steps {
                     dir('edge') {
@@ -60,7 +59,7 @@ pipeline {
                 }
             }
             
-        }*/
+        }
 
             stage('Build proxy bundle') {
                 steps {

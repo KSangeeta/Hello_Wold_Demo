@@ -136,9 +136,9 @@
                 <apigee.options>update</apigee.options>
                 <api.northbound.domain>${vhostProtocol}://${vhostDomainName}:${vhostDomainPort}</api.northbound.domain>
                 <api.testtag>~@wip</api.testtag>
-                <apigee.config.dir>resources/edge</apigee.config.dir>
+                <apigee.config.dir>target/resources/edge</apigee.config.dir>
                 <apigee.config.options>create</apigee.config.options>
-                <apigee.config.exportDir>test/integration</apigee.config.exportDir>
+                <apigee.config.exportDir>target/test/integration</apigee.config.exportDir>
             </properties>
 
             <build>

@@ -15,7 +15,7 @@
             "test"
         ],
         "proxies": [
-            "demo-helloWorld-v1"
+            "demo-helloWorld"
         ],
         "quota": "10000",
         "quotaInterval": "1",

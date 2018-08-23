@@ -12,7 +12,7 @@
         "description": "sampleAPIProduct",
         "displayName": "sampleAPIProduct",
         "environments": [
-            "edge_env"
+            "test"
         ],
         "proxies": [
             "demo-helloWorld-v1"

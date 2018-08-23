@@ -39,11 +39,11 @@
 
         <apigee.api.protocol>https</apigee.api.protocol>
         <apigee.api.host>api.enterprise.apigee.com</apigee.api.host>
-        <!--<apigee.api.port>443</apigee.api.port>-->
+        <apigee.api.port>443</apigee.api.port>
         <apigee.apiversion>v1</apigee.apiversion>
 
-        <!--<vhostProtocol>http</vhostProtocol>
-        <vhostDomainName>${org}-${env}.apigee.net</vhostDomainName>-->
+        <vhostProtocol>http</vhostProtocol>
+        <vhostDomainName>${org}-${env}.apigee.net</vhostDomainName>
         <vhostDomainPort>80</vhostDomainPort>
         <vhostEdgeName>default</vhostEdgeName>
 
